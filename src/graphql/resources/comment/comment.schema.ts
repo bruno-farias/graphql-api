@@ -3,8 +3,8 @@ const commentTypes = `
   type Comment {
     id: ID!
     comment: String!
-    createAt: String!
-    updateAt: String!
+    createdAt: String!
+    updatedAt: String!
     user: User!
     post: Post!
   }
