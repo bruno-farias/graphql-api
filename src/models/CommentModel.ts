@@ -3,7 +3,7 @@ import * as Sequelize from "sequelize";
 import { BaseModelInterface } from "../interfaces/BaseModelInterface";
 import { ModelsInterface } from "../interfaces/ModelsInterface";
 
-export interface CommentsAttributes {
+export interface CommentAttributes {
   id?: number;
   comment?: string;
   post?: number;
@@ -12,9 +12,9 @@ export interface CommentsAttributes {
   updatedAt?: string;
 }
 
-export interface CommentsInstance extends Sequelize.Instance<CommentsAttributes> {};
+export interface CommentInstance extends Sequelize.Instance<CommentAttributes> {};
 
-export interface CommentModel extends BaseModelInterface, Sequelize.Model<CommentsInstance, CommentsAttributes> {};
+export interface CommentModel extends BaseModelInterface, Sequelize.Model<CommentInstance, CommentAttributes> {};
 
 export default (sequelize: Sequelize.Sequelize, DataTypes: Sequelize.DataTypes): CommentModel => {
   const Comment: CommentModel = sequelize.define('Comment', {
